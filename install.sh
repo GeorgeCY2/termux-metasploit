@@ -59,7 +59,7 @@ gem install bundler
 bundle config build.nokogiri --use-system-libraries
 
 
-gem install nokogiri -- --use-system-libraries
+gem install nokogiri -v '1.8.0' -- --use-system-libraries
  
 sed 's|grpc (.*|grpc (1.4.1)|g' -i $HOME/metasploit-framework/Gemfile.lock
 gem unpack grpc -v 1.4.1
