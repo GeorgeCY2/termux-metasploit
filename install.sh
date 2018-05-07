@@ -58,7 +58,7 @@ sed '/rbnacl/d' -i metasploit-framework.gemspec
 gem install bundler
 bundle config build.nokogiri --use-system-libraries
 
-
+sed 's|nokogiri (*|nokogiri (1.8.0)|g' -i Gemfile.lock
 gem install nokogiri -v '1.8.0' -- --use-system-libraries
  
 sed 's|grpc (.*|grpc (1.4.1)|g' -i $HOME/metasploit-framework/Gemfile.lock
